@@ -1,0 +1,14 @@
+
+<div>
+  <button (click)="addAssignment()">Add Assignment</button>
+</div>
+
+<div cdkDropList class="assignment-container" (cdkDropListDropped)="dropAssignment($event)">
+  <div *ngFor="let assignment of assignments" cdkDrag>
+    <app-assignment [assignment]="assignment" (clientsChanged)="onClientsChanged()"></app-assignment>
+  </div>
+</div>
+
+
+
+<router-outlet />

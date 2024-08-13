@@ -1,0 +1,11 @@
+<div class="assignment-box" cdkDropList [cdkDropListData]="assignment.clients" (cdkDropListDropped)="dropClient($event)">
+  <h3>{{ assignment.name }}</h3>
+  <div *ngFor="let client of assignment.clients" class="client-box" cdkDrag [cdkDragData]="client">
+    {{ client }}
+  </div>
+</div>
+
+
+
+
+
